@@ -1,0 +1,80 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  /* line-height: 1.5; */
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*鼠标点击后移开，恢复本身样式*/
+.buttonDiv,
+.buttonDiv:focus:not(.buttonDiv:hover) {
+  margin-right: 12px;
+  border: 1px solid #2794f8;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 #f4f4f4;
+  color: #2794f8;
+  background: white;
+}
+
+/*鼠标悬浮，没有按下；鼠标按下后抬起，没有移开*/
+.buttonDiv:focus,
+.buttonDiv:hover {
+  background: #eaf5ff;
+  border: 1px solid #2794f8 !important;
+  color: #2794f8;
+}
+
+/*鼠标按下，没有抬起*/
+.buttonDiv:active {
+  background: #2794f8;
+  color: white;
+}
